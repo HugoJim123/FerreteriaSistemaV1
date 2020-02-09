@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31BF5215-84DA-4698-B645-71A776527834}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VentasCompras</RootNamespace>
+    <AssemblyName>VentasCompras</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CapaDatosFerreteria">
+      <HintPath>..\..\..\CapaDatosFerreteria\CapaDatosFerreteria\CapaDatosFerreteria\bin\Debug\CapaDatosFerreteria.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CapaDatosFerreteria\CapaDatosFerreteria\ReporteadorFerreteria\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CapaDatosFerreteria\CapaDatosFerreteria\ReporteadorFerreteria\bin\Debug\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CapaDatosFerreteria\CapaDatosFerreteria\ReporteadorFerreteria\bin\Debug\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CapaDatosFerreteria\CapaDatosFerreteria\ReporteadorFerreteria\bin\Debug\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReporteadorFerreteria">
+      <HintPath>..\..\..\CapaDatosFerreteria\CapaDatosFerreteria\ReporteadorFerreteria\bin\Debug\ReporteadorFerreteria.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BI\GENERAL\UI_GeneralGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BI\GENERAL\UI_GeneralGraph.Designer.cs">
+      <DependentUpon>UI_GeneralGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BI\GENERAL\UI_GraficasClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BI\GENERAL\UI_GraficasClientes.Designer.cs">
+      <DependentUpon>UI_GraficasClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BI\GENERAL\UI_GraficasCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BI\GENERAL\UI_GraficasCompras.Designer.cs">
+      <DependentUpon>UI_GraficasCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BI\GENERAL\UI_GraficasVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BI\GENERAL\UI_GraficasVentas.Designer.cs">
+      <DependentUpon>UI_GraficasVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENTES\UI_DetalleClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLIENTES\UI_DetalleClientes.Designer.cs">
+      <DependentUpon>UI_DetalleClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENTES\UI_ConsultaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLIENTES\UI_ConsultaClientes.Designer.cs">
+      <DependentUpon>UI_ConsultaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENTES\UI_IngresoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLIENTES\UI_IngresoClientes.Designer.cs">
+      <DependentUpon>UI_IngresoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENTES\UI_PrecioCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLIENTES\UI_PrecioCliente.Designer.cs">
+      <DependentUpon>UI_PrecioCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COTIZACIONES\UI_ConsultaCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COTIZACIONES\UI_ConsultaCotizacion.Designer.cs">
+      <DependentUpon>UI_ConsultaCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COTIZACIONES\UI_DetalleCotizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COTIZACIONES\UI_DetalleCotizaciones.Designer.cs">
+      <DependentUpon>UI_DetalleCotizaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COTIZACIONES\UI_IngresoDeCotizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COTIZACIONES\UI_IngresoDeCotizaciones.Designer.cs">
+      <DependentUpon>UI_IngresoDeCotizaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DEVOLUCIONES\UI_ConsultaDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEVOLUCIONES\UI_ConsultaDevoluciones.Designer.cs">
+      <DependentUpon>UI_ConsultaDevoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DEVOLUCIONES\UI_DetalleDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEVOLUCIONES\UI_DetalleDevoluciones.Designer.cs">
+      <DependentUpon>UI_DetalleDevoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DEVOLUCIONES\UI_IngresoDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEVOLUCIONES\UI_IngresoDevoluciones.Designer.cs">
+      <DependentUpon>UI_IngresoDevoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedores.Designer.cs">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTES\UI_FilltroReporteCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTES\UI_FilltroReporteCD.Designer.cs">
+      <DependentUpon>UI_FilltroReporteCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTES\UI_FiltroReporteCVCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTES\UI_FiltroReporteCVCD.Designer.cs">
+      <DependentUpon>UI_FiltroReporteCVCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTES\UI_FiltroReporteDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTES\UI_FiltroReporteDevoluciones.Designer.cs">
+      <DependentUpon>UI_FiltroReporteDevoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_ConsultaCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_ConsultaCompras.Designer.cs">
+      <DependentUpon>UI_ConsultaCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI_DetalleCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_DetalleCompra.Designer.cs">
+      <DependentUpon>UI_DetalleCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_IngresoComprasv2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_IngresoComprasv2.Designer.cs">
+      <DependentUpon>UI_IngresoComprasv2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_IngresoDeCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_IngresoDeCompras.Designer.cs">
+      <DependentUpon>UI_IngresoDeCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_VistaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_VistaProveedores.Designer.cs">
+      <DependentUpon>UI_VistaProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Vistas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Vistas.Designer.cs">
+      <DependentUpon>UI_Vistas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS\UI_ConsultaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS\UI_ConsultaVentas.Designer.cs">
+      <DependentUpon>UI_ConsultaVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS\UI_DetalleVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS\UI_DetalleVenta.Designer.cs">
+      <DependentUpon>UI_DetalleVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS\UI_IngresoDeVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS\UI_IngresoDeVentas.Designer.cs">
+      <DependentUpon>UI_IngresoDeVentas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BI\GENERAL\UI_GeneralGraph.resx">
+      <DependentUpon>UI_GeneralGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BI\GENERAL\UI_GraficasClientes.resx">
+      <DependentUpon>UI_GraficasClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BI\GENERAL\UI_GraficasCompras.resx">
+      <DependentUpon>UI_GraficasCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BI\GENERAL\UI_GraficasVentas.resx">
+      <DependentUpon>UI_GraficasVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLIENTES\UI_ConsultaClientes.resx">
+      <DependentUpon>UI_ConsultaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLIENTES\UI_DetalleClientes.resx">
+      <DependentUpon>UI_DetalleClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLIENTES\UI_IngresoClientes.resx">
+      <DependentUpon>UI_IngresoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLIENTES\UI_PrecioCliente.resx">
+      <DependentUpon>UI_PrecioCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COTIZACIONES\UI_ConsultaCotizacion.resx">
+      <DependentUpon>UI_ConsultaCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COTIZACIONES\UI_DetalleCotizaciones.resx">
+      <DependentUpon>UI_DetalleCotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COTIZACIONES\UI_IngresoDeCotizaciones.resx">
+      <DependentUpon>UI_IngresoDeCotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEVOLUCIONES\UI_ConsultaDevoluciones.resx">
+      <DependentUpon>UI_ConsultaDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEVOLUCIONES\UI_DetalleDevoluciones.resx">
+      <DependentUpon>UI_DetalleDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEVOLUCIONES\UI_IngresoDevoluciones.resx">
+      <DependentUpon>UI_IngresoDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedores.resx">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\UI_FilltroReporteCD.resx">
+      <DependentUpon>UI_FilltroReporteCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\UI_FiltroReporteCVCD.resx">
+      <DependentUpon>UI_FiltroReporteCVCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\UI_FiltroReporteDevoluciones.resx">
+      <DependentUpon>UI_FiltroReporteDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_ConsultaCompras.resx">
+      <DependentUpon>UI_ConsultaCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI_DetalleCompra.resx">
+      <DependentUpon>UI_DetalleCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_IngresoComprasv2.resx">
+      <DependentUpon>UI_IngresoComprasv2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_IngresoDeCompras.resx">
+      <DependentUpon>UI_IngresoDeCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_VistaProveedores.resx">
+      <DependentUpon>UI_VistaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Vistas.resx">
+      <DependentUpon>UI_Vistas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\UI_ConsultaVentas.resx">
+      <DependentUpon>UI_ConsultaVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\UI_DetalleVenta.resx">
+      <DependentUpon>UI_DetalleVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS\UI_IngresoDeVentas.resx">
+      <DependentUpon>UI_IngresoDeVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

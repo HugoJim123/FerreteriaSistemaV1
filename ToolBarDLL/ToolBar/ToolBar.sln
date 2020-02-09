@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBar", "ToolBar\ToolBar.csproj", "{A2668423-410D-4D8F-A206-793C9A7C935B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaToolBar", "LogicaToolBar\LogicaToolBar.csproj", "{2A79576F-7AA1-42FA-9089-2643F4607BB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2668423-410D-4D8F-A206-793C9A7C935B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2668423-410D-4D8F-A206-793C9A7C935B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2668423-410D-4D8F-A206-793C9A7C935B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2668423-410D-4D8F-A206-793C9A7C935B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A79576F-7AA1-42FA-9089-2643F4607BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A79576F-7AA1-42FA-9089-2643F4607BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A79576F-7AA1-42FA-9089-2643F4607BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A79576F-7AA1-42FA-9089-2643F4607BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9012CE50-4450-4D50-91E9-2D14BAC597EE}
+	EndGlobalSection
+EndGlobal

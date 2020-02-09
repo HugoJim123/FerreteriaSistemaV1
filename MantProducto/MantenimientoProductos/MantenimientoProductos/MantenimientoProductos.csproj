@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16A2F133-EAFC-49C9-9352-5B5004972029}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MantenimientoProductos</RootNamespace>
+    <AssemblyName>MantenimientoProductos</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CapaDatosFerreteria">
+      <HintPath>..\..\..\CapaDatosFerreteria\CapaDatosFerreteria\CapaDatosFerreteria\bin\Debug\CapaDatosFerreteria.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="ReporteadorFerreteria">
+      <HintPath>..\..\..\CapaDatosFerreteria\CapaDatosFerreteria\ReporteadorFerreteria\bin\Debug\ReporteadorFerreteria.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSetProductos.cs">
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetProductos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoProductos.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteProductos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteProductos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportViewProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewProductos.Designer.cs">
+      <DependentUpon>ReportViewProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_AsignacionDeProductoABodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_AsignacionDeProductoABodega.Designer.cs">
+      <DependentUpon>UI_AsignacionDeProductoABodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_AsignarCantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_AsignarCantidad.Designer.cs">
+      <DependentUpon>UI_AsignarCantidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_DetalleProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_DetalleProductos.Designer.cs">
+      <DependentUpon>UI_DetalleProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Existencias_MovimientosProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Existencias_MovimientosProductos.Designer.cs">
+      <DependentUpon>UI_Existencias_MovimientosProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FiltroReporteProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FiltroReporteProductos.Designer.cs">
+      <DependentUpon>UI_FiltroReporteProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_IngresoModifiacionProductosV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_IngresoModifiacionProductosV2.Designer.cs">
+      <DependentUpon>UI_IngresoModifiacionProductosV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Ingreso_ModificacionProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Ingreso_ModificacionProducto.Designer.cs">
+      <DependentUpon>UI_Ingreso_ModificacionProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_MantenimientoProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_MantenimientoProductos.Designer.cs">
+      <DependentUpon>UI_MantenimientoProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_MantenimientosVarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_MantenimientosVarios.Designer.cs">
+      <DependentUpon>UI_MantenimientosVarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_MovimientosInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_MovimientosInventario.Designer.cs">
+      <DependentUpon>UI_MovimientosInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_OtrasConfiguraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_OtrasConfiguraciones.Designer.cs">
+      <DependentUpon>UI_OtrasConfiguraciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_TrasladoEntreBodegas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_TrasladoEntreBodegas.Designer.cs">
+      <DependentUpon>UI_TrasladoEntreBodegas.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteProductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewProductos.resx">
+      <DependentUpon>ReportViewProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_AsignacionDeProductoABodega.resx">
+      <DependentUpon>UI_AsignacionDeProductoABodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_AsignarCantidad.resx">
+      <DependentUpon>UI_AsignarCantidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_DetalleProductos.resx">
+      <DependentUpon>UI_DetalleProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Existencias_MovimientosProductos.resx">
+      <DependentUpon>UI_Existencias_MovimientosProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FiltroReporteProductos.resx">
+      <DependentUpon>UI_FiltroReporteProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_IngresoModifiacionProductosV2.resx">
+      <DependentUpon>UI_IngresoModifiacionProductosV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Ingreso_ModificacionProducto.resx">
+      <DependentUpon>UI_Ingreso_ModificacionProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_MantenimientoProductos.resx">
+      <DependentUpon>UI_MantenimientoProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_MantenimientosVarios.resx">
+      <DependentUpon>UI_MantenimientosVarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_MovimientosInventario.resx">
+      <DependentUpon>UI_MovimientosInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_OtrasConfiguraciones.resx">
+      <DependentUpon>UI_OtrasConfiguraciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_TrasladoEntreBodegas.resx">
+      <DependentUpon>UI_TrasladoEntreBodegas.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSetProductos.xsc">
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProductos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProductos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetProductos.xss">
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
